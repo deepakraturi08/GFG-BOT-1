@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GFG_BOT</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="chatbot-container bg-white rounded-lg shadow-md max-w-sm mx-auto mt-16 p-6">
+
+    <div class="chatbot-header text-center">
+      <h1 class="text-xl font-semibold text-gray-800">GFG BOT</h1>
+    </div>
+
+    <div class="chatbot-messages mt-4">
+
+      <div class="bot-message bg-blue-100 text-gray-700 rounded-lg shadow-md p-4">
+        <p>{{bot_response}}</p>
+      </div>
+
+      <form action="{{url_for('chatbot')}}" method="post" class="flex">
+        <input type="text" id="message" name="message" placeholder="Type your message>>>" required
+          class="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring focus:ring-blue-400">
+        <button type="submit"
+          class="px-4 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-green-600 focus:outline-none focus:bg-green-600">Enter</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
